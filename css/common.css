@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+#wrap { 
+    position: relative;
+}
+
+#header {
+    position: fixed;
+    /* max-width: 1170px; */
+    left: 20%;
+    right: 20%;
+    top: 0;
+    /* margin: 0px auto; */
+    padding: 20px 15px;
+    z-index:9999;
+}
+
+
+/* 로고 */
+
+#header #navGroup > a {
+    float: left;
+    padding: 15px 0px;    
+}
+
+
+#header .open {
+    display: none;
+}
+
+#header .close {
+    display: none;
+}
+
+
+/* 네비게이션 센터 */
+
+#navGroup .nav {
+    float: left;
+    padding-left: 50px;
+    width: 70%;
+}
+
+
+#navGroup .nav > .depth1 > li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+
+#navGroup .nav > .depth1 > li > a {
+    display: block;
+    margin: 30px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+
+#navGroup .nav > .depth1 > li:last-child a {
+    border: none;
+}
+
+#navGroup .nav > .depth1 > li .depth2 {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 13px 21px;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    transform: translateX(-16px);
+    transition: all .5s;
+}
+
+
+#navGroup .nav > .depth1 > li .depth2 > li a{
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#navGroup .nav > .depth1 > li .depth2 li:last-child a{
+    border: none;
+}
+
+
+/* 네비게이션 우측 */
+
+#navGroup .nav2 {
+    float: right;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+
+#navGroup .nav2 > .depth1 > li {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#navGroup .nav2 > .depth1 > li > a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    text-align: center;
+    padding:5px 0;
+    display: block;
+}
+
+#navGroup .nav2 > .depth1 > li:last-child a {
+    border: none;
+}
+
+
+
+
