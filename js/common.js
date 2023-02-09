@@ -82,7 +82,7 @@ $('#navGroup .nav .depth1 > li').hover(
             if ($('html').hasClass('pc')) {
                 $(this).find('.depth2').css({
                     transform: 'translateX(-13px)',
-                    visible: 'hidden'
+                    visible: 'hidden',
                 })
             }
         }

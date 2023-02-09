@@ -18,3 +18,18 @@ $('.article2 .content_g .content').on('mouseover', function(){
 $('.article2 .content_g .content').on('mouseout', function(){
     $(this).removeClass('on')
 })
+
+
+// article4 구역
+
+let article4Near = $('.article4').offset().top - $(window).height()/1.2
+
+$(window).on('scroll', function(){
+    let sct = $(this).scrollTop()
+    console.log(sct)
+    if (sct >= article4Near){
+        $('.article4').addClass('on')
+    } else {
+        $('.article4').removeClass('on')
+    }
+})
