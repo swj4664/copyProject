@@ -29,7 +29,6 @@ let article4Near = $('.article4').offset().top - $(window).height()/1.2
 
 $(window).on('scroll', function(){
     let sct = $(this).scrollTop()
-    console.log(sct)
     if (sct >= article4Near){
         $('.article4').addClass('on')
     } else {
@@ -53,7 +52,6 @@ let article5Near = $('.article5').offset().top - $(window).height()/1.2
 
 $(window).on('scroll', function(){
     let sct = $(this).scrollTop()
-    console.log(sct)
     if (sct >= article5Near){
         $('.article5').addClass('on')
     } else {

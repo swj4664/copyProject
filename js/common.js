@@ -130,7 +130,6 @@ $(window).on('scroll', function(){
     if ($('html').hasClass('pc')){
         $(window).on('scroll', function(){
             let sct = $(this).scrollTop()
-            console.log(sct)
             if (sct >= 100){
                 $('#background').addClass('on')
             } else {
@@ -145,7 +144,6 @@ $(window).on('scroll', function(){
     if ($('html').hasClass('pc')){
         $(window).on('scroll', function(){
             let sct = $(this).scrollTop()
-            console.log(sct)
             if (sct >= 100){
                 $('#header').addClass('on')
             } else {
