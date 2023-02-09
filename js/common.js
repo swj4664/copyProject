@@ -123,6 +123,41 @@ $('#navGroup .nav2 .depth1 > li').hover(
 )
 
 
+// 헤더 스크롤이벤트
+// let headerNear = $('#header').offset().top - $(window).height()/1.3
+
+$(window).on('scroll', function(){
+    if ($('html').hasClass('pc')){
+        $(window).on('scroll', function(){
+            let sct = $(this).scrollTop()
+            console.log(sct)
+            if (sct >= 100){
+                $('#background').addClass('on')
+            } else {
+                $('#background').removeClass('on')
+            }
+        })
+        
+    }
+})
+
+$(window).on('scroll', function(){
+    if ($('html').hasClass('pc')){
+        $(window).on('scroll', function(){
+            let sct = $(this).scrollTop()
+            console.log(sct)
+            if (sct >= 100){
+                $('#header').addClass('on')
+            } else {
+                $('#header').removeClass('on')
+            }
+        })
+        
+    }
+})
+
+
+
 
 // 모바일 시작
 
@@ -141,8 +176,10 @@ $('#header .close').on('click', function () {
 $('#header .depth1 > li > a').on('click', function () {
     if ($('html').hasClass('mobile') && $(this).next().is('.depth2')) {
         $(this).next().stop().slideToggle()
+        $(this).parent().siblings().find('.depth2').slideUp()
         return false
-    }
+    } 
+   
 })
 
 
@@ -184,4 +221,5 @@ $('#header .nav .depth2 > li').click(
             return false
         } 
     })
+
 

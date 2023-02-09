@@ -6,13 +6,41 @@
 
 #header {
     position: fixed;
-    /* max-width: 1170px; */
     left: 20%;
     right: 20%;
     top: 0;
-    /* margin: 0px auto; */
     padding: 20px 15px;
     z-index:9999;
+    transform: translateY(0px);
+    transition: all .4s;
+}
+
+#header.on {
+  
+    transform: translateY(-20px);
+}
+
+#background {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    width: 100%;
+    height: 79px;
+    z-index: 99;
+    transition: all .4s;
+    opacity: 0;
+}
+
+
+#background.on {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    width: 100%;
+    height: 79px;
+    z-index: 99;
+    transition: all .4s;
+    opacity: 1;
 }
 
 
