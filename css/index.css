@@ -282,6 +282,7 @@
 
 
 .article4 .row {
+    max-width: 1170px;
     margin: 0 auto;
     transform: translateY(20%);
     transition: all 1s 0s;
