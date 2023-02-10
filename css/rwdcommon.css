@@ -8,7 +8,7 @@
         left: 10%;
         right: 10%;
         top: 0;
-        z-index:9999;
+        z-index: 9999;
     }
 }
 
@@ -18,7 +18,7 @@
         left: 2%;
         right: 2%;
         top: 0;
-        z-index:9999;
+        z-index: 9999;
     }
 }
 
@@ -28,7 +28,7 @@
         left: 0;
         right: 0;
         top: 0;
-        z-index:9999;
+        z-index: 9999;
     }
 }
 
@@ -42,17 +42,17 @@
         right: 0px;
         top: 0;
         padding: 0px 0px;
-        z-index:9999;
+        z-index: 9999;
         background-color: rgba(0, 0, 0, 0.8);
     }
-    
-    
-/* 로고 */
-    #header #navGroup > a {
+
+
+    /* 로고 */
+    #header #navGroup>a {
         float: none;
         padding: 15px 10px;
         transform: translateY(0px);
-        display: inline-block; 
+        display: inline-block;
     }
 
     /* 네비게이션 센터 */
@@ -68,13 +68,13 @@
         display: none;
     }
 
-    #header #navGroup .nav > .depth1 {
+    #header #navGroup .nav>.depth1 {
         display: block;
     }
 
 
 
-    #navGroup .nav > .depth1 > li {
+    #navGroup .nav>.depth1>li {
         float: none;
         width: 100%;
         padding-bottom: 0px;
@@ -86,9 +86,9 @@
         cursor: pointer;
     }
 
-    #navGroup .nav > .depth1 > li > a {
+    #navGroup .nav>.depth1>li>a {
         display: block;
-        margin:0;
+        margin: 0;
         border-right: 0px solid rgba(255, 255, 255, 0.35);
         padding: 10px 0;
         background-color: rgba(0, 0, 0, 0.8);
@@ -97,9 +97,11 @@
         border-bottom: solid 1px rgba(255, 255, 255, 0.15);
     }
 
+    #navGroup .nav>.depth1>li>a.on {
+        color: rgba(255, 255, 255, 0.9);
+    }
 
-
-    #navGroup .nav > .depth1 > li .depth2 {
+    #navGroup .nav>.depth1>li .depth2 {
         display: none;
         position: static;
         top: 100%;
@@ -113,7 +115,7 @@
 
 
 
-    #navGroup .nav > .depth1 > li .depth2 > li a{
+    #navGroup .nav>.depth1>li .depth2>li a {
         display: block;
         padding: 9px 5px;
         font-size: 13px;
@@ -121,6 +123,10 @@
         color: rgba(255, 255, 255, 0.9);
         transition: all .4s;
         border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #navGroup .nav>.depth1>li .depth2>li.on a {
+        color: rgba(255, 255, 255, 0.45);
     }
 
 
@@ -175,6 +181,53 @@
         font-size: 25px;
         padding: 5px 5px;
     }
+
+    /* footer 구역 */
+
+    #footer .bottom_menu1 li a {
+        font-size: 12px;
+        display: block;
+        padding: 1px 5px;
+        border-right: none;
+    }
+
+    #footer .bottom_menu2 {
+        content: '';
+        display: block;
+        clear: both;
+        max-width: 1170px;
+        margin: 0 auto;
+        font-size: 13px;
+        padding: 35px 0 60px;
+    }
+
+    #footer .bottom_menu2 .address {
+        float: left;
+        width: 100%;
+        padding: 0 15px;
+        line-height: 2;
+        text-align: center;
+    }
+
+
+    #footer .bottom_menu2 .sns {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer .bottom_menu2 .address span {
+        display: block;
+    }
+
+    #footer .bottom_menu2 .sns .sns_content {
+        display: inline-block;
+        text-align: center;
+        padding-right: 15px;
+        margin-top: 25px;
+    }
+
+
 
 
 

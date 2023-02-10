@@ -171,6 +171,11 @@ $('#header .close').on('click', function () {
 })
 
 
+
+
+
+
+//네비게이션
 $('#header .depth1 > li > a').on('click', function () {
     if ($('html').hasClass('mobile') && $(this).next().is('.depth2')) {
         $(this).next().stop().slideToggle()
@@ -180,44 +185,42 @@ $('#header .depth1 > li > a').on('click', function () {
    
 })
 
-
-
-
-//네비게이션
 $('#header .nav .depth1 > li > a').click(
     function () {
-        if ($('html').hasClass('mobile') && $(this).parent('li').hasClass('on')){
-            $(this).css ({
-                color: 'rgba(255, 255, 255, 0.45)'
-            }),
-            $(this).parent('li').removeClass('on')
-            return false
-        } else if ($('html').hasClass('mobile')){
-            $(this).css ({
-                color: 'rgba(255, 255, 255, 0.9)'
-            }),
-            $(this).parent('li').addClass('on')
-            return false
-        } 
+        if ($('html').hasClass('mobile')){
+            $(this).toggleClass('on')
+            $(this).parent('li').siblings().children('a').removeClass('on')
+            $(this).parent('li').find('li').removeClass('on')
+        }
     })
-
-
+    
+    
 
 $('#header .nav .depth2 > li').click(
     function () {
-        if ($('html').hasClass('mobile') && $(this).hasClass('on')){
-            $(this).find('a').css ({
-                color: 'rgba(255, 255, 255, 0.9)'
-            }),
-            $(this).removeClass('on')
-            return false
-        } else if ($('html').hasClass('mobile')){
-            $(this).find('a').css ({
-                color: 'rgba(255, 255, 255, 0.45)'
-            }),
+        if ($('html').hasClass('mobile')){
             $(this).addClass('on')
-            return false
+            $(this).siblings().removeClass('on')
         } 
     })
+
+
+// gotop
+
+$(window).scroll(function(){
+    let sct = $(this).scrollTop()
+    if (sct>100) {
+        $('#gotop').fadeIn(300)
+    } else {
+        $('#gotop').fadeOut(300)
+    }
+})
+
+$('#gotop a').click(function(){
+    $('html').animate({
+        scrollTop:'0'
+    }, 500)
+    return false
+})
 
 
