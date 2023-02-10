@@ -36,6 +36,15 @@ $(window).on('scroll', function(){
     }
 })
 
+$('.article4 .content .tab li').on('click', function(){
+    let num = $(this).index()
+    if(!$(this).hasClass('active')) {
+        $(this).addClass('active').siblings().removeClass('active')
+        $(this).parent('.tab').siblings('.table').eq(num).addClass('active')
+        .siblings('.table').removeClass('active')
+    }
+})
+
 
 // article5 구역
 $('.article5 .last_slide_g').slick({

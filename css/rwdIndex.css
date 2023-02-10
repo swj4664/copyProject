@@ -35,7 +35,7 @@
         width: 50%;
         padding-right: 40px;
     }
-    
+
     .article4 .row .content2 {
         width: 50%;
     }
@@ -47,6 +47,9 @@
     .article4 .row .content4 {
         width: 50%;
     }
+
+
+ 
 
     /* article5 구역 */
 
@@ -65,17 +68,27 @@
         width: 100%;
     }
 
+    .article5 .last_slide_g .last_slide .text div:last-child {
+        text-align: right;
+    }
+
     .article5 .last_slide_g .last_slide .img {
         display: block;
         float: left;
         height: 309px;
+        margin-top: 50px;
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+    
+    .article5 .slick-arrow .fa-solid{
+        display: none;
+    }
 
 }
+
 
 
 @media screen and (max-width:768px) {
@@ -86,6 +99,30 @@
         width: 100%;
         padding: 0 15px;
     }
+
+        /* article4 구역 */
+
+        .article4 .row .content1 {
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        .article4 .row .content_center {
+            display: block;
+            width: 100%;
+        }
+        
+        .article4 .row .content2 {
+            width: 100%;
+        }
+        
+        .article4 .row .content3 {
+            width: 100%;
+        }
+        
+        .article4 .row .content4 {
+            width: 100%;
+        }
 
    
 }
