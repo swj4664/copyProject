@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+#wrap { 
+    position: relative;
+}
+
+#header {
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    top: 0;
+    padding: 20px 15px;
+    z-index:9999;
+    transform: translateY(0px);
+    transition: all .4s;
+}
+
+#header.on {
+  
+    transform: translateY(-20px);
+}
+
+#background {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    width: 100%;
+    height: 79px;
+    z-index: 99;
+    transition: all .4s;
+    opacity: 0;
+}
+
+
+#background.on {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+    width: 100%;
+    height: 79px;
+    z-index: 99;
+    transition: all .4s;
+    opacity: 1;
+}
+
+
+/* 로고 */
+
+#header #navGroup > a {
+    float: left;
+    padding: 15px 0px;    
+}
+
+
+#header .open {
+    display: none;
+}
+
+#header .close {
+    display: none;
+}
+
+
+/* 네비게이션 센터 */
+
+#navGroup .nav {
+    float: left;
+    padding-left: 50px;
+    width: 70%;
+}
+
+
+#navGroup .nav > .depth1 > li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+
+#navGroup .nav > .depth1 > li > a {
+    display: block;
+    margin: 30px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+
+#navGroup .nav > .depth1 > li:last-child a {
+    border: none;
+}
+
+#navGroup .nav > .depth1 > li .depth2 {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 13px 21px;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: collapse;
+    transform: translateX(-15px);
+}
+
+
+
+
+#navGroup .nav > .depth1 > li .depth2 > li a{
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#navGroup .nav > .depth1 > li .depth2 li:last-child a{
+    border: none;
+}
+
+
+/* 네비게이션 우측 */
+
+#navGroup .nav2 {
+    float: right;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+
+#navGroup .nav2 > .depth1 > li {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#navGroup .nav2 > .depth1 > li > a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    text-align: center;
+    padding:5px 0;
+    display: block;
+}
+
+#navGroup .nav2 > .depth1 > li:last-child a {
+    border: none;
+}
+
+
+
+    /* gotop */
+
+    #gotop{
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        
+    }
+    
+    #gotop a {
+        display: block;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.15);
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        line-height: 34px;
+        z-index: 9999;
+    }
+    
+
+
+    
+/* footer 구역 */
+
+#footer .bottom_menu_g {
+    background-color: #111;
+    color: #666;
+}
+
+#footer .bottom_menu1 {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+}
+
+#footer .bottom_menu1 li {
+    display: inline-block;
+}
+
+#footer .bottom_menu1 li a {
+    display: block;
+    padding: 1px 45px;
+    border-right: solid 1px rgba(255, 255, 255, 0.12);
+    transition: all .2s;
+}
+
+#footer .bottom_menu1 li.on a {
+    display: block;
+    padding: 1px 45px;
+    border-right: solid 1px rgba(255, 255, 255, 0.12);
+    color: #333;
+}
+
+#footer .bottom_menu1 li:last-child a {
+    border: none;
+}
+
+#footer .bottom_menu2 {
+    max-width: 1170px;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 35px 0 60px;
+}
+
+#footer .bottom_menu2 .address{
+    float: left;
+    width: 66.66%;
+    padding: 0 15px;
+    line-height: 2;
+}
+
+#footer .bottom_menu2 .sns{
+    float: left;
+    width: 33.33%;
+    text-align: right;
+}
+
+#footer .bottom_menu2 .sns .sns_content {
+    display: inline-block;
+    text-align: center;
+    padding-right: 15px;
+}
+
+#footer .bottom_menu2 .sns span {
+    font-size: 12px;
+}
+
+#footer .bottom_menu2 .sns .sns_content ul {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#footer .bottom_menu2 .sns .sns_content ul li {
+    display: inline-block;
+    padding: 0 2px;
+}
+
