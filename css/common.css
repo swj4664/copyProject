@@ -282,3 +282,47 @@
 .introAni.on { display: flex;}
 
 
+/* popup 스타일 */
+.popup {
+    display: none;
+    position: fixed;
+    padding: 20px;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.popup.on{
+    display: block;
+}
+
+.popup .close {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 8px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 13px;
+}
+
+.popup .close input {
+    position: absolute;
+    margin-left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup .close button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: 1px solid white;
+    color: white;
+    padding: 1px;
+    font-size: 13px;
+}

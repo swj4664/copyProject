@@ -82,3 +82,56 @@ $(window).on('scroll', function(){
         $('.article5').removeClass('on')
     }
 })
+
+
+// 모달창
+
+// article2 구역의 돋보기 클릭하면 이미지를 모달창에서 크게 보기
+$('.article2 ul li img').on('click', function(){
+    let src = $(this).attr('src')
+    let modal = `<div class="modal">`
+    modal += `<div class="imgbox">`
+    modal += `<img src="${src}" alt="">`
+    modal += `<button type="button">닫기</button>`
+    modal += `</div>`
+    modal += `</div>`
+    $('body').append(modal)
+    $('.modal').css({
+        position:'fixed',
+        top:0,
+        left:0,
+        width:'100%',
+        height:'100%',
+        background:'rgba(0,0,0,0.5)'
+    })
+    $('.imgbox').css({
+        position:'absolute',
+        width:'300px',
+        top:'50%',
+        left:'50%',
+        transform:'translate(-50%, -50%)'
+    })
+    $('img').css({
+        width:'100%'
+    })
+    $('.imgbox button').css({
+        position:'absolute',
+        top:'0',
+        right:'0',
+        background:'#000',
+        color:'#fff',
+        padding:'5px 10px'
+    })
+    return false
+})
+
+
+// 모달창의 닫기 버튼 클릭하면 모달창 닫게 하기
+$('body').on('click', '.modal button, .modal', function(){
+    $('.modal').hide()
+})
+
+// 모달창의 링크걸린 이미지를 클릭했을때 모달창 닫히는것 막기
+$('body').on('click', '.modal img', function(e){
+    e.stopPropagation()
+})

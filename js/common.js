@@ -52,7 +52,36 @@ if( !sessionStorage.getItem('refresh')){
         // $('.introAni div').eq(1).text(count+'%')
     }
 }
+
+let objString = localStorage.getItem('objkey') 
+    if ( objString ) {
+        const obj = JSON.parse(objString)
+        if ( Date.now()>obj.expire ) {
+            $('.popup').addClass('on')
+            localStorage.removeItem('objkey')
+        } else {
+            $('.popup').removeClass('on')
+        }
+    } else {
+        $('.popup').addClass('on')
+    }
+
+
 })
+
+$('.close button').on('click', function(){
+    if ( $(this).prev().prop('checked') ) {
+        let tts = Date.now()+(100000)   // 하루는 (24*60*60*1000)ms
+        const obj = {
+            check : 'yes',
+            expire : tts
+        }
+        localStorage.setItem('objkey', JSON.stringify(obj))
+    } 
+    $('.popup').removeClass('on')
+})
+
+
 
 
 
