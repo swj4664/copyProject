@@ -110,9 +110,12 @@
         background: rgba(0, 0, 0, 0.8);
         padding: 0px 0px;
         transition: all 0s;
+        visibility: visible;
         transform: translateX(0px);
     }
 
+
+    
 
 
     #navGroup .nav>.depth1>li .depth2>li a {
@@ -189,6 +192,14 @@
         display: block;
         padding: 1px 5px;
         border-right: none;
+        transition: all .2s;
+    }
+
+    #footer .bottom_menu1 li.on a {
+        display: block;
+        padding: 1px 5px;
+        border-right: none;
+        color: #333;
     }
 
     #footer .bottom_menu2 {

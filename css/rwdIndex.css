@@ -1,7 +1,7 @@
 @media screen and (max-width:1133px) {
 
-        /* article4 구역 */
-        
+    /* article4 구역 */
+
     .article4 .left {
         position: relative;
         float: left;
@@ -23,23 +23,36 @@
         width: 100%;
         padding-right: 40px;
     }
-    
+
     .article4 .row .content2 {
         width: 100%;
     }
-    
+
     .article4 .row .content3 {
         width: 100%;
     }
-    
+
     .article4 .row .content4 {
         margin-top: 30px;
         width: 100%;
     }
 
-    
+    .article4 .content2 .go,
+    .article4 .content3 .go {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 999;
+        height: 25px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+
     /* .article5 구역 */
-/* 
+    /* 
     .article5 .slick-prev {
         left: 30px;
         z-index: 999;
@@ -55,7 +68,7 @@
         transform: scale(3);
     } */
 
-    
+
 
 }
 
@@ -90,13 +103,12 @@
 
     /* article4 구역 */
 
-
-
-
+    .article4 .content2 {
+        border-left: none;
+        border-right: solid 1px #dedede;
+    }
 
     /* article5 구역 */
-
-
 
     .article5 .last_slide_g .last_slide {
         overflow: hidden;
@@ -133,84 +145,109 @@
 
 
 
-@media screen and (max-width:768px) {
+    @media screen and (max-width:768px) {
 
-    /* .article2 구역 */
-    .article2 .content_g li {
-        display: block;
-        float: left;
-        width: 100%;
-        padding: 0 15px;
+        /* .article2 구역 */
+        .article2 .content_g li {
+            display: block;
+            float: left;
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        /* article4 구역 */
+
+        .article4 .left {
+            position: relative;
+            float: left;
+            overflow: hidden;
+            width: 100%;
+            height: 487px;
+        }
+
+        .article4 .right {
+            float: right;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        
+
+
+        .article4 .row .content {
+            display: block;
+            vertical-align: top;
+            padding: 0 15px;
+        }
+
+        .article4 .row .content1 {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        .article4 .row .content2 {
+            position: absolute;
+            top: 240px;
+            width: 100%;
+        }
+
+        .article4 .content2 {
+            border-left: none;
+            border-right: none;
+        }
+
+        .article4 .row .content3 {
+            width: 100%;
+        }
+
+        .article4 .row .content4 {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+
+        .article4 .content2 .con,
+        .article4 .content3 .con {
+            margin-top: 10px;
+            border: solid 1px #dedede;
+            padding: 16px 20px;
+            color: #666;
+            text-align: center;
+            transition: all .4s;
+        }
+
+        .article4 .content2 .con>div img,
+        .article4 .content3 .con>div img {
+            margin-top: -20%;
+            transform: scale(1);
+            transition: all .4s;
+            width: 100%;
+        }
+
+
+
+        .article4 .content4 .box {
+            margin-top: 40px;
+            border: 1px solid #dbdbdb;
+            padding: 15px 15px 19px;
+            min-height: 202px;
+            text-align: center;
+        }
+
+        .article4 .content2 .con div,
+        .article4 .content3 .con div {
+            position: relative;
+            height: 91px;
+        }
+
+
+
+
+
+
+
     }
-
-    /* article4 구역 */
-
-    .article4 .left {
-        position: relative;
-        float: left;
-        overflow: hidden;
-        width: 100%;
-        height: 607px;
-    }
-
-    .article4 .right {
-        float: right;
-        overflow: hidden;
-        width: 100%;
-    }
-    
-
-    .article4 .row .content {
-        display: block;
-        vertical-align: top;
-        padding: 0 15px;
-    }
-
-    .article4 .row .content1 {
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 100%;
-        padding-right: 40px;
-    }
-    
-    .article4 .row .content2 {
-        position: absolute;
-        top: 240px;
-        width: 100%;
-    }
-    
-    .article4 .row .content3 {
-        width: 100%;
-    }
-    
-    .article4 .row .content4 {
-        margin-top: 30px;
-        width: 100%;
-    }
-    
-
-    .article4 .content2 .con,
-    .article4 .content3 .con {
-        margin-top: 40px;
-        border: solid 1px #dedede;
-        padding: 16px 20px;
-        color: #666;
-        text-align: center;
-        transition: all .4s;
-    }
-
-    .article4 .content4 .box {
-        margin-top: 40px;
-        border: 1px solid #dbdbdb;
-        padding: 15px 15px 19px;
-        min-height: 202px;
-        text-align: center;
-    }
-
-
- 
-
-
-
 }
