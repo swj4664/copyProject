@@ -111,11 +111,10 @@
         padding: 0px 0px;
         transition: all 0s;
         visibility: visible;
+        opacity: 1;
         transform: translateX(0px);
     }
 
-
-    
 
 
     #navGroup .nav>.depth1>li .depth2>li a {

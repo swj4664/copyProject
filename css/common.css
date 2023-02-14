@@ -255,3 +255,16 @@
     padding: 0 2px;
 }
 
+
+
+/* 인트로 애니메이션 스타일 */
+.introAni { position:fixed; top:0; left:0; bottom:0; width:100%;  
+    background:#fff; color:#666;
+    font-size:30px; text-align:center; z-index:9999999999;
+    display:none; flex-direction:column;
+    align-items:center; justify-content: center;
+}
+
+.introAni.on { display: flex;}
+
+
