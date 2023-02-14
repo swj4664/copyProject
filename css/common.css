@@ -229,6 +229,20 @@
     line-height: 2;
 }
 
+#footer .bottom_menu2 .address .address_content{
+    text-align: center;
+}
+
+#footer .bottom_menu2 .address .address_content span{
+    float: left;
+}
+
+
+#footer .bottom_menu2 .address .address_content > span > span{
+    padding: 0 5px;
+}
+
+
 #footer .bottom_menu2 .sns{
     float: left;
     width: 33.33%;

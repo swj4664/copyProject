@@ -86,6 +86,7 @@
         cursor: pointer;
     }
 
+    
     #navGroup .nav>.depth1>li>a {
         display: block;
         margin: 0;
@@ -94,13 +95,15 @@
         background-color: rgba(0, 0, 0, 0.8);
         color: rgba(255, 255, 255, 0.45);
         border-top: solid 1px rgba(255, 255, 255, 0.15);
-        border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+        border-bottom: solid 0px rgba(255, 255, 255, 0.15);
     }
-
+    
     #navGroup .nav>.depth1>li>a.on {
         color: rgba(255, 255, 255, 0.9);
+        border-bottom: solid 1px rgba(255, 255, 255, 0.15);
     }
-
+    
+    
     #navGroup .nav>.depth1>li .depth2 {
         display: none;
         position: static;
@@ -114,9 +117,9 @@
         opacity: 1;
         transform: translateX(0px);
     }
-
-
-
+    
+    
+    
     #navGroup .nav>.depth1>li .depth2>li a {
         display: block;
         padding: 9px 5px;
@@ -129,9 +132,13 @@
 
     #navGroup .nav>.depth1>li .depth2>li.on a {
         color: rgba(255, 255, 255, 0.45);
+        border-bottom: none;
     }
-
-
+    
+    #navGroup .nav > .depth1 > li:nth-child(4) a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
     /* 네비게이션 상단 */
     #navGroup .nav2 {
         float: none;
@@ -219,6 +226,15 @@
         text-align: center;
     }
 
+    #footer .bottom_menu2 .address .address_content span{
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    #footer .bottom_menu2 .address .address_content > span > span {
+        display: none;
+    }
 
     #footer .bottom_menu2 .sns {
         float: left;
@@ -226,9 +242,6 @@
         text-align: center;
     }
 
-    #footer .bottom_menu2 .address span {
-        display: block;
-    }
 
     #footer .bottom_menu2 .sns .sns_content {
         display: inline-block;

@@ -34,8 +34,8 @@ $(window).on('resize', function () {
 })
 
 $(window).on('load', function(){
-// if( !sessionStorage.getItem('refresh')){
-//     sessionStorage.setItem('refresh', 'yes')
+if( !sessionStorage.getItem('refresh')){
+    sessionStorage.setItem('refresh', 'yes')
     $('.introAni').addClass('on')
     let count = 0;
     let timer = setInterval(add, 30)
@@ -51,7 +51,7 @@ $(window).on('load', function(){
         }
         // $('.introAni div').eq(1).text(count+'%')
     }
-// }
+}
 })
 
 
@@ -193,11 +193,10 @@ $('#header .close').on('click', function () {
 //네비게이션
 $('#header .depth1 > li > a').on('click', function () {
     if ($('html').hasClass('mobile') && $(this).next().is('.depth2')) {
-        $(this).next().stop().slideToggle()
+        $(this).next().stop().slideToggle(0)
         $(this).parent().siblings().find('.depth2').slideUp()
         return false
     }
-
 })
 
 $('#header .nav .depth1 > li > a').click(
