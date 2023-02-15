@@ -235,7 +235,7 @@ menuTrigger.addEventListener('click', (event) => {
 $('#header .depth1 > li > a').on('click', function () {
     if ($('html').hasClass('mobile') && $(this).next().is('.depth2')) {
         $(this).next().stop().slideToggle(0)
-        $(this).parent().siblings().find('.depth2').slideUp()
+        $(this).parent().siblings().find('.depth2').slideUp(0)
         return false
     }
 })
