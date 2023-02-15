@@ -239,7 +239,6 @@
 
         
 
-
         .article4 .row .content {
             display: block;
             vertical-align: top;
@@ -267,6 +266,7 @@
 
         .article4 .row .content3 {
             width: 100%;
+            margin-top: 20px;
         }
 
         .article4 .row .content4 {
