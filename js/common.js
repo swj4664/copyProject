@@ -213,6 +213,7 @@ $('#header .open').on('click', function () {
     }
     
 })
+
 // $('#header .open').on('click', function () {
 //     $('.nav').slideDown() && $(this).hide() && $('.close').fadeIn()
 //     return false
@@ -235,6 +236,12 @@ menuTrigger.addEventListener('click', (event) => {
 $('#header .depth1 > li > a').on('click', function () {
     if ($('html').hasClass('mobile') && $(this).next().is('.depth2')) {
         $(this).next().stop().slideToggle(0)
+        $(this).parent().siblings().find('.depth2').slideUp(0)
+        return false
+    }
+})
+$('#header .depth1 > li > a').on('click', function () {
+    if ($('html').hasClass('mobile')) {
         $(this).parent().siblings().find('.depth2').slideUp(0)
         return false
     }
