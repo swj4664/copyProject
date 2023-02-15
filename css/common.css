@@ -44,6 +44,57 @@
 }
 
 
+
+/* 햄버거 x변환 */
+.open,
+.open span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.open {
+  position: relative;
+  width: 25px;
+  height: 22px;
+}
+
+.open span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.open span:nth-of-type(1) {
+  top: 0;
+}
+
+.open span:nth-of-type(2) {
+  top: 10.3px;
+}
+
+.open span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* 2th bar 사라지고,  1st 3rd bar 회전하며 X  */
+
+.open.active-1 span:nth-of-type(1) {
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.open.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.open.active-1 span:nth-of-type(3) {
+  transform: translateY(-20px) rotate(45deg);
+}
+
+
 /* 로고 */
 
 #header #navGroup > a {
@@ -290,7 +341,7 @@
     top: 100px;
     left: 100px;
     width: 300px;
-    height: 400px;
+    height: 300px;
     background: rgba(255, 255, 255, 0.8);
     z-index: 99999999;
 }

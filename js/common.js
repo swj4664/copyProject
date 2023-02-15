@@ -71,7 +71,7 @@ let objString = localStorage.getItem('objkey')
 
 $('.close button').on('click', function(){
     if ( $(this).prev().prop('checked') ) {
-        let tts = Date.now()+(100000)   // 하루는 (24*60*60*1000)ms
+        let tts = Date.now()+(24*60*60*1000)   // 하루는 (24*60*60*1000)ms
         const obj = {
             check : 'yes',
             expire : tts
@@ -203,19 +203,31 @@ $(window).on('scroll', function () {
 
 // 모바일 시작
 
-// 메뉴열기버튼
+// 햄버거 버튼
 $('#header .open').on('click', function () {
-    $('.nav').slideDown() && $(this).hide() && $('.close').fadeIn()
-    return false
+    if(!$(this).hasClass('active-1')){
+        $('.nav').slideDown()
+        return false
+    } else {
+        $('.nav').slideUp()
+    }
+    
 })
+// $('#header .open').on('click', function () {
+//     $('.nav').slideDown() && $(this).hide() && $('.close').fadeIn()
+//     return false
+// })
 
-$('#header .close').on('click', function () {
-    $('.nav').slideUp() && $(this).hide() && $('.open').fadeIn()
-    return false
-})
+// $('#header .close').on('click', function () {
+//     $('.nav').slideUp() && $(this).hide() && $('.open').fadeIn()
+//     return false
+// })
 
 
-
+const menuTrigger = document.querySelector('.open');
+menuTrigger.addEventListener('click', (event) => {
+  event.currentTarget.classList.toggle('active-1');
+});
 
 
 
